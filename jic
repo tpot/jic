@@ -7185,9 +7185,12 @@ def cmd_servers_list(cfg):
 
     default = cfg.o.get('server', '')
 
-    for srv_name, srv_def in cfg.o.get('servers').iteritems():
-        pr(tpl.format_server_list_item(
-                tpl, srv_name, srv_def, srv_name == default))
+    servers = cfg.o.get('servers')
+
+    if servers is not None:
+        for srv_name, srv_def in servers.iteritems():
+            pr(tpl.format_server_list_item(
+                    tpl, srv_name, srv_def, srv_name == default))
 
 
 def cmd_servers_select(cfg):
