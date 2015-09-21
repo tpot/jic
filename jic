@@ -2580,7 +2580,7 @@ class Cache (object):
             # TODO: report error
             raise RuntimeError(
                 u'No server specified - please either '\
-                u'do `jic select server` or use -S switch')
+                u'do `jic server select` or use -S switch')
 
         self.srv_cfg = cfg.o.get('servers.' + self.srv_name)
 
