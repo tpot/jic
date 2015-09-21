@@ -81,8 +81,7 @@ def vpr(string=u'', end=u'\n', flush=False):
             sys.stdout.flush()
 
 try:
-    from jira.client import JIRA
-    from jira.exceptions import JIRAError
+    from jira.client import JIRA, JIRAError
     from jira.resources import Comment, Component, Issue, IssueType, \
                                Project, Resolution, Status, User, \
                                Version, Worklog
